@@ -1,4 +1,4 @@
-package com.programmingkida.microservices.forex.limitservice.controller.bean;
+package com.programmingkida.microservices.forex.limitservice.bean;
 
 public class Limits {
 	private int minimum;
