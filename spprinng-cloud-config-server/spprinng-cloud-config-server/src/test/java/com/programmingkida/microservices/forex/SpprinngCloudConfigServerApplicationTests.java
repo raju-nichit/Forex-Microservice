@@ -1,0 +1,13 @@
+package com.programmingkida.microservices.forex;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpprinngCloudConfigServerApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
