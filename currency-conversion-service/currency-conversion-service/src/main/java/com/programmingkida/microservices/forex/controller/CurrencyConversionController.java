@@ -28,7 +28,7 @@ public class CurrencyConversionController {
 				"http://localhost:8000/currency-exchange/from/USD/to/INR", CurrencyConversion.class, urivariables);
 		CurrencyConversion currencyConversion = responseEntity.getBody();
 		return new CurrencyConversion(1000L, from, to, currencyConversion.getConversionMultiple(), quantity,
-				quantity.multiply(currencyConversion.getConversionMultiple()), currencyConversion.getEnvironment());
+				quantity.multiply(currencyConversion.getConversionMultiple()), currencyConversion.getEnvironment() +" from rest temaplate");
 	}
 
 	@GetMapping("currency-conversion-feign/from/{from}/to/{to}/quantity/{quantity}")
@@ -37,6 +37,6 @@ public class CurrencyConversionController {
 			
 		CurrencyConversion currencyConversion = currencyExchangeProxy.retrieveExchangeValue(from, to);
 		return new CurrencyConversion(1000L, from, to, currencyConversion.getConversionMultiple(), quantity,
-				quantity.multiply(currencyConversion.getConversionMultiple()), currencyConversion.getEnvironment());
+				quantity.multiply(currencyConversion.getConversionMultiple()), currencyConversion.getEnvironment()+ " from feign");
 	}
 }
